@@ -1,3 +1,23 @@
+# EL4106-1 University of Chile - Domain Adaptation 
+
+This constitutes an extension and study of the previous work by Ganin et al. We expect to have a document regarding the study by the end of 2018.
+
+In order to run the tests the following datasets must be inside this folder structure:
+* TF-DANN folder
+    * Datasets folder
+        * svhn folder
+            * SVHN dataset train and test .mat files extracted from zip found on this [link](http://ufldl.stanford.edu/housenumbers/)
+        * SynthDigits folder
+            * SynthDigits extracted dataset found [here](https://drive.google.com/file/d/0B9Z4d7lAwbnTSVR1dEFSRUFxOUU/view)
+        * USPS folder
+            * USPS h5 files extracted here from [site](https://www.kaggle.com/bistaumanga/usps-dataset)
+    * MNIST_data folder
+        * Compressed files downloaded automatically with MNIST-DANN notebook
+    * BSR_bsds500 file
+        * Used by the script *create_minstm.py* to generate the mnistm_data.pkl . Instructions bellow.
+
+The requirement.txt does not contain **tensorflow** as to allow the user to chose between the CPU or GPU version. It needs to be installed manually.
+
 # Domain-Adversarial Training of Neural Networks in Tensorflow
 
 "[Unsupervised Domain Adaptation by Backpropagation](http://sites.skoltech.ru/compvision/projects/grl/files/paper.pdf)" introduced a simple and effective method for accomplishing domain adaptation with SGD with a gradient reversal layer. This work was elaborated and extended in "[Domain-Adversarial Training of Neural Networks](http://jmlr.org/papers/volume17/15-239/15-239.pdf)". For more information as well as a link to an equivalent implementation in Caffe, see http://sites.skoltech.ru/compvision/projects/grl/.
